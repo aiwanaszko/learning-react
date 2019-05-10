@@ -9,13 +9,12 @@ class Column extends React.Component {
   }
 
   render() {
-    return (
-      <section classNames={styles.component}>
-        <h3 classNames={styles.title}></h3>
-        <div>{this.props.columnTitle}</div>
-      </section>
-    )
-  }
+      return (
+        <section className={styles.component}>
+          <h3 className={styles.title}>{this.props.columnTitle}</h3>
+        </section>
+      )
+    }
 }
 
 export default Column;
