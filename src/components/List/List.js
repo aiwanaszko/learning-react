@@ -25,20 +25,20 @@ class List extends React.Component {
   }
 
   addColumn(title){
-  this.setState(state => (
-    {
-      columns: [
-        ...state.columns,
-        {
-          key: state.columns[state.columns.length-1].key+1,
-          title,
-          icon: 'list-alt',
-          cards: []
-        }
-      ]
-    }
-  ));
-}
+    this.setState(state => (
+      {
+        columns: [
+          ...state.columns,
+          {
+            key: state.columns[state.columns.length-1].key+1,
+            title,
+            icon: 'list-alt',
+            cards: [],
+          },
+        ],
+      }
+    ));
+  }
 
   render() {
     return (
@@ -46,17 +46,17 @@ class List extends React.Component {
         <Hero titleText={this.props.title} imageSource={this.props.image} />
         <div className={styles.description}>
           {ReactHtmlParser(this.props.description)}
-          </div>
-          <div className={styles.columns}>
+        </div>
+        <div className={styles.columns}>
           {this.state.columns.map(({key, ...columnProps}) => (
             <Column key={key} {...columnProps} />
           ))}
-          </div>
-          <div className={styles.creator}>
+        </div>
+        <div className={styles.creator}>
           <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
-          </div>
+        </div>
       </section>
-    )
+    );
   }
 }
 
