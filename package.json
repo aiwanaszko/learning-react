@@ -12,7 +12,7 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-    },
+  },
       "lint-staged": {
         "src/**/*.js": "eslint"
     },
