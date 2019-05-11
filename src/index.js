@@ -1,4 +1,4 @@
-const test = "1"
+const whatever = "2"
 
 import React from 'react';
 import './styles/normalize.scss';
