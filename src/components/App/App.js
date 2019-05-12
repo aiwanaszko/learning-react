@@ -6,10 +6,10 @@ import List from '../List/ListContainer.js';
 class App extends React.Component {
 
   static propTypes = {
-  title: PropTypes.node,
-  subtitle: PropTypes.node,
-  lists: PropTypes.array,
-}
+    title: PropTypes.node,
+    subtitle: PropTypes.node,
+    lists: PropTypes.array,
+  }
 
   render() {
     const {title, subtitle, lists} = this.props;
