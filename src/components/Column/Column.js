@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Column.scss';
-// import {settings} from '../../data/dataStore';
+import {settings} from '../../data/dataStore.js';
 import PropTypes from 'prop-types';
 import Card from '../Card/Card.js';
 import Icon from '../Icon/Icon.js';
@@ -14,6 +14,9 @@ class Column extends React.Component {
     icon: PropTypes.node,
   }
 
+  static defaultProps = {
+    icon: settings.defaultColumnIcon,
+  }
 
   render() {
     const {title, icon, cards} = this.props;
