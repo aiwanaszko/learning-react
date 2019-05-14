@@ -1,24 +1,24 @@
-/* import shortid from 'shortid';
+import shortid from 'shortid';
 
 // selectors
-export const getColumnsForList = ({columns}, listId) => columns.filter(column => column.listId == listId);
+export const getCardsForColumn = ({cards}, columnId) => cards.filter(card => card.columnId == columnId);
 
 // action name creator
-const reducerName = 'columns';
+const reducerName = 'cards';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 // action types
-export const ADD_COLUMN = createActionName('ADD_COLUMN');
+export const ADD_CARD = createActionName('ADD_CARD');
 
 // action creators
-export const createAction_addColumn = payload => ({ payload, type: ADD_COLUMN });
+export const createAction_addCard = payload => ({ payload, type: ADD_CARD });
 
 // reducer
 export default function reducer(state = [], action = {}) {
   switch (action.type) {
-    case ADD_COLUMN:
+    case ADD_CARD:
       return [...state, { ...action.payload, id: shortid.generate() }];
     default:
       return state;
   }
-} */
+}
