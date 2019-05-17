@@ -5,7 +5,7 @@ import {createAction_changeSearchString} from '../../redux/searchStringRedux.js'
 
 
 const mapStateToProps = (state, props) => ({
-  searchResults: getCardsForSearch(cards, searchString),
+  searchResults: getCardsForSearch({cards}, searchString),
 });
 
 const mapDispatchToProps = (dispatch) => ({
