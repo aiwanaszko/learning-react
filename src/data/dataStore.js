@@ -1,4 +1,5 @@
 export const settings = {
+  navIcon: 'heart',
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
   creator: {
@@ -17,6 +18,18 @@ export const settings = {
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
+};
+
+export const infoSettings = {
+  title: 'About Me',
+  image: 'https://i.postimg.cc/1t6p0b5h/three-toed-sloth.jpg',
+  content: 'Hi! I am learning React and this is my first app. Have a look around!',
+};
+
+export const faqSettings = {
+  title: 'Frequently Asked Questions',
+  image: 'https://i.postimg.cc/1tL9pY7F/Manuel-Antonio-National-Park-featimg-sloth-820x312.jpg',
+  content: 'To be or not to be?',
 };
 
 export const listData = {

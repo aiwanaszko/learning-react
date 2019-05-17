@@ -9,9 +9,9 @@ const baseConfig = () => ({
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
     filename: 'scripts_bundle.js',
+  },
   devServer: {
     historyApiFallback: true,
-    },
   },
   module: {
     rules: [
