@@ -9,16 +9,17 @@ import List from '../List/List';
 class SearchResults extends React.Component {
   static propTypes = {
     cards: PropTypes.node,
+    listId: PropTypes.node,
   }
 
   render() {
-    const {cards, id} = this.props;
+    const {cards, listId} = this.props;
     return (
       <section>
       <Container>
         <div className={styles.component}>
           {cards.map(cardData => (
-            <Link to={`/list/${id}`}>
+            <Link to='/list/:listId'>
             <Card key={cardData.id} {...cardData}>
             </Card></Link>
           ))}
