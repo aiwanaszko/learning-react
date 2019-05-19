@@ -1,11 +1,11 @@
 import shortid from 'shortid';
 
 // selectors
-export const getCardsForColumn = ({cards, searchString}, columnId) => cards.filter(card => card.columnId == columnId);
+export const getCardsForColumn = ({cards}, columnId) => cards.filter(card => card.columnId == columnId);
 
 export const getCardsForSearch = (cards, searchString) => cards.filter(card => new RegExp(searchString, 'i').test(card.title));
 
-export const getListforCard = ({lists, columns, cards}, id) => lists.filter(list => (card.columnId == columnId && column.listId == list.Id));
+export const getListforCard = (state, id) => lists.filter(list => (card.columnId == column.id && column.listId == list.id));
 
 
 // action name creator

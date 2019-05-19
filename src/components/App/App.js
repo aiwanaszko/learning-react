@@ -21,8 +21,8 @@ const App = () => (
       <Route exact path='/' component={Home} />
       <Route exact path='/info' component={Info} />
       <Route exact path='/faq' component={FAQ} />
-      <Route exact path="/list/:id" component={List} />
-      <Route exact path="/search/:searchString" component={SearchResultsContainer} />
+      <Route exact path='/list/:id' component={List} />
+      <Route exact path='/search/:searchString' component={SearchResultsContainer} />
     </AnimatedSwitch>
   </MainLayout>
 </BrowserRouter>

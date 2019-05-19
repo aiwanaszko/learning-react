@@ -13,6 +13,7 @@ class Home extends React.Component {
 
   render() {
     const {title, subtitle, lists} = this.props;
+    console.log(this.props);
     return (
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>
