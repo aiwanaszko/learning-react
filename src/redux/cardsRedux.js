@@ -5,13 +5,13 @@ export const getCardsForColumn = ({cards}, columnId) => cards.filter(card => car
 
 export const getCardsForSearch = (cards, searchString) => cards.filter(card => new RegExp(searchString, 'i').test(card.title));
 
-export const getListforCard = (state, id, columnId, listId) => {
+export const getListforCard = (state, id) => {
 
   const searchedCard = state.cards.filter(card => card.id == id);
   const searchedColumn = state.columns.filter(column => column.id == searchedCard.columnId);
   const searchedList = state.lists.filter(list => list.id == searchedColumn.listId);
 
-  return searchedList.id;
+  return searchedList;
 };
 
 
