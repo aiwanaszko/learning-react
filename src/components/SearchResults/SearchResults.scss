@@ -9,3 +9,13 @@
   border-radius: $radius;
   color: $color-dark;
 }
+
+.links {
+  text-decoration: none;
+  color: $color-dark;
+}
+
+.links:hover {
+  color: $color-success;
+  transition: all 1s ease;
+}
