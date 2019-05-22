@@ -3,17 +3,24 @@ import shortid from 'shortid';
 // selectors
 export const getCardsForColumn = ({cards}, columnId) => cards.filter(card => card.columnId == columnId);
 
-export const getCardsForSearch = (cards, searchString) => cards.filter(card => new RegExp(searchString, 'i').test(card.title));
+export const getCardsForSearch = ({cards, columns}, searchString) => {
+  let output = cards;
 
-export const getListforCard = (state, id) => {
+  output = output.filter(card => new RegExp(searchString, 'i').test(card.title));
 
-  const searchedCard = state.cards.filter(card => card.id == id);
-  const searchedColumn = state.columns.filter(column => column.id == searchedCard.columnId);
-  const searchedList = state.lists.filter(list => list.id == searchedColumn.listId);
+  return output.map(card => {
+     //console.log('aaa', card, columns);
+     const foundColumn = columns.filter(column => card.columnId == column.id);
 
-  return searchedList;
-};
+     //console.log('FOUND COLUMN', foundColumn[0].listId);
+     const foundList = foundColumn[0].listId;
 
+     return {
+       ...card,
+       listId: foundList,
+     }
+  });
+}
 
 // action name creator
 const reducerName = 'cards';

@@ -52,9 +52,7 @@ class Search extends React.Component {
             value={value}
             onChange={event => this.handleChange(event)}
           />
-          <div className={styles.buttons}>
-            <Button onClick={() => this.handleOK()}><Icon name={icon} /></Button>
-          </div>
+            <Button className={styles.buttons} onClick={() => this.handleOK()}><Icon name={icon} /></Button>
           <div>
             { countVisible == countAll ? '' : `${countVisible} / ${countAll}` }
           </div>

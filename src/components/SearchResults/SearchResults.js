@@ -18,11 +18,15 @@ class SearchResults extends React.Component {
       <section>
       <Container>
         <div className={styles.component}>
-          {cards.map(cardData => (
-            <Link to={`/list/${listId}`}>
-            <Card key={cardData.id} {...cardData}>
-            </Card></Link>
-          ))}
+          {cards.map(cardData => {
+            console.log('aaa', cardData);
+
+            return (
+              <Link to={`/list/${cardData.listId}`}>
+              <Card key={cardData.id} {...cardData}>
+              </Card></Link>
+            );
+          })}
         </div>
       </Container>
       </section>
